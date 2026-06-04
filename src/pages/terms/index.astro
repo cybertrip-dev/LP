@@ -1,0 +1,125 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import AnnounceBanner from '../../components/AnnounceBanner.astro';
+import Footer from '../../components/Footer.astro';
+
+const lang = 'ja';
+---
+
+<Base
+  title="利用規約 — CyberTrip"
+  description="株式会社CyberTripが提供するDriftアプリの利用規約。"
+  lang={lang}
+  page="terms"
+>
+  <AnnounceBanner lang={lang} />
+  <Header lang={lang} page="terms" />
+
+  <section class="page-hero page-hero--news">
+    <div class="page-hero-inner">
+      <p class="page-hero-label">Terms of Service</p>
+      <h1 class="page-hero-title">利用規約</h1>
+      <p class="page-hero-sub">最終更新日: 2026年6月5日</p>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="section-inner legal-content">
+
+      <p class="legal-intro">
+        本利用規約（以下「本規約」）は、株式会社CyberTrip（以下「当社」）が提供する旅行者マッチングアプリ「Drift」（以下「本サービス」）のご利用条件を定めるものです。本サービスをご利用いただくことにより、本規約に同意したものとみなされます。
+      </p>
+
+      <h2>1. 規約への同意</h2>
+      <p>本サービスにアクセスし利用することにより、お客様は本規約の条項に拘束されることに同意するものとします。本規約に同意いただけない場合は、本サービスをご利用いただけません。</p>
+
+      <h2>2. 利用資格</h2>
+      <p>本サービスのご利用には18歳以上であることが必要です。本サービスを利用することにより、お客様は本規約を締結する権利、権限および能力を有することを表明し保証するものとします。</p>
+
+      <h2>3. アカウント登録</h2>
+      <p>アカウント作成時には、正確かつ完全な情報を提供する必要があります。アカウントの認証情報の機密性を維持し、アカウントで行われるすべての活動について責任を負うものとします。</p>
+
+      <h2>4. 利用上の禁止事項</h2>
+      <p>お客様は、本サービスを以下の目的で使用しないことに同意するものとします。</p>
+      <ul>
+        <li>法令または規制に違反する行為</li>
+        <li>知的財産権を侵害する行為</li>
+        <li>他のユーザーへの嫌がらせ、虐待または危害を加える行為</li>
+        <li>虚偽または誤解を招く情報の投稿</li>
+        <li>スパムまたは未承諾メッセージの送信</li>
+        <li>悪意のあるコードまたはウイルスのアップロード</li>
+        <li>出会い系・交際目的での利用</li>
+        <li>特定の人種・性別・国籍を排除する行為</li>
+      </ul>
+
+      <h2>5. コンテンツの所有権</h2>
+      <p>お客様が本サービスに投稿したコンテンツの所有権はお客様に帰属します。ただし、コンテンツを投稿することにより、当社に対し、本サービスに関連してそのコンテンツを使用、変更、表示するための全世界的、非独占的、無償のライセンスを付与するものとします。</p>
+
+      <h2>6. SNS連携</h2>
+      <p>本サービスではInstagram等の外部サービスとの連携機能を提供します。連携により、お客様のアカウントを通じてコンテンツの閲覧・投稿が可能になります。連携は随時解除できます。外部サービスの利用については、各サービスの利用規約が適用されます。</p>
+
+      <h2>7. アカウントの停止・終了</h2>
+      <p>当社は、本規約への違反を含む何らかの理由により、お客様のアカウントをいつでも停止または終了する権利を有します。お客様もアカウント設定からいつでもアカウントを終了することができます。</p>
+
+      <h2>8. 免責事項</h2>
+      <p>本サービスは「現状有姿」で提供されるものであり、いかなる種類の保証も付しません。本サービスが中断なく、安全に、またはエラーなく提供されることを保証するものではありません。</p>
+
+      <h2>9. 責任の制限</h2>
+      <p>当社は、本サービスのご利用に起因または関連して生じる間接的、偶発的、特別または結果的損害について、一切の責任を負いません。</p>
+
+      <h2>10. 規約の変更</h2>
+      <p>当社は本規約をいつでも変更する権利を有します。重要な変更がある場合はお客様に通知します。変更後も本サービスを継続してご利用いただくことにより、新しい規約に同意したものとみなされます。</p>
+
+      <h2>11. 準拠法および管轄</h2>
+      <p>本規約は日本法に準拠し、日本法に従って解釈されるものとします。本規約に関する紛争については、東京地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+
+      <h2>12. お問い合わせ</h2>
+      <p>
+        本利用規約に関するご質問は、下記までご連絡ください。
+      </p>
+      <p>
+        株式会社CyberTrip<br />
+        メール: <a href="mailto:support@cybertrip.jp">support@cybertrip.jp</a>
+      </p>
+
+    </div>
+  </section>
+
+  <Footer lang={lang} />
+</Base>
+
+<style>
+  .legal-content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .legal-intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    color: rgba(255,255,255,0.8);
+  }
+  .legal-content h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+    color: #fff;
+  }
+  .legal-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 0.75rem;
+  }
+  .legal-content ul {
+    margin: 0.5rem 0 1.5rem 1.5rem;
+    color: rgba(255,255,255,0.75);
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+  .legal-content a {
+    color: var(--accent, #00d4aa);
+    text-decoration: underline;
+  }
+</style>

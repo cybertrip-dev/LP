@@ -1,0 +1,145 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import AnnounceBanner from '../../components/AnnounceBanner.astro';
+import Footer from '../../components/Footer.astro';
+
+const lang = 'ja';
+---
+
+<Base
+  title="プライバシーポリシー — CyberTrip"
+  description="株式会社CyberTripのプライバシーポリシー。Driftアプリにおける個人情報の取り扱いについて。"
+  lang={lang}
+  page="privacy"
+>
+  <AnnounceBanner lang={lang} />
+  <Header lang={lang} page="privacy" />
+
+  <section class="page-hero page-hero--news">
+    <div class="page-hero-inner">
+      <p class="page-hero-label">Privacy Policy</p>
+      <h1 class="page-hero-title">プライバシーポリシー</h1>
+      <p class="page-hero-sub">最終更新日: 2026年6月5日</p>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="section-inner legal-content">
+
+      <p class="legal-intro">
+        株式会社CyberTrip（以下「当社」）は、旅行者マッチングアプリ「Drift」（以下「本サービス」）におけるお客様の個人情報の取り扱いについて、以下のとおりプライバシーポリシーを定めます。
+      </p>
+
+      <h2>1. 収集する情報</h2>
+      <h3>アカウント情報</h3>
+      <p>氏名、メールアドレス、生年月日、プロフィール写真、自己紹介文。</p>
+      <h3>旅行情報</h3>
+      <p>旅行先、旅行日程、旅行の好み・興味。</p>
+      <h3>利用データ</h3>
+      <p>アプリの利用状況、使用した機能、滞在時間。</p>
+      <h3>位置情報</h3>
+      <p>近くの旅行者を表示するためのおおよその位置情報（お客様の許可のもと）。</p>
+      <h3>SNS連携情報</h3>
+      <p>Instagram等の外部サービスと連携した場合、アカウント情報および投稿に必要な権限情報。</p>
+
+      <h2>2. 情報の利用目的</h2>
+      <ul>
+        <li>本サービスの提供および改善</li>
+        <li>旅行の好みに基づくマッチング</li>
+        <li>通知およびお知らせの送信</li>
+        <li>安全性の確保および不正利用の防止</li>
+        <li>利用傾向の分析</li>
+        <li>法令に基づく義務の遂行</li>
+      </ul>
+
+      <h2>3. 情報の共有</h2>
+      <p>当社はお客様の個人情報を第三者に販売することはありません。以下の場合に限り情報を共有することがあります。</p>
+      <h3>他のユーザー</h3>
+      <p>プライバシー設定に基づき、プロフィール情報が他のユーザーに表示されます。</p>
+      <h3>サービス提供者</h3>
+      <p>本サービスの運営を支援する第三者企業（クラウドインフラ、分析ツール等）。</p>
+      <h3>法的要件</h3>
+      <p>法令に基づく場合、または当社の権利保護のために必要な場合。</p>
+
+      <h2>4. データの安全管理</h2>
+      <p>当社は業界標準の暗号化技術およびセキュリティ対策を用いてお客様のデータを保護します。ただし、インターネットを介した情報の送受信において、100%の安全性を保証することはできません。</p>
+
+      <h2>5. お客様の権利</h2>
+      <p>お客様は以下の権利を有します。</p>
+      <ul>
+        <li>ご自身の個人データへのアクセス</li>
+        <li>不正確な情報の訂正</li>
+        <li>データの削除の請求</li>
+        <li>マーケティング目的の連絡の停止</li>
+        <li>データのダウンロード</li>
+        <li>位置情報共有の管理</li>
+      </ul>
+
+      <h2>6. Cookie等の利用</h2>
+      <p>当社はCookieおよび類似の技術を使用して、利用体験の向上、利用状況の分析、パーソナライズされたコンテンツの提供を行います。</p>
+
+      <h2>7. 未成年者の利用</h2>
+      <p>本サービスは18歳未満の方を対象としておりません。18歳未満の方から意図的に個人情報を収集することはありません。</p>
+
+      <h2>8. 国際データ移転</h2>
+      <p>お客様の情報は、異なる国のサーバーに転送・保存される場合があります。国際的な転送に際しては、適切な保護措置を講じます。</p>
+
+      <h2>9. 本ポリシーの変更</h2>
+      <p>当社は本プライバシーポリシーを随時更新することがあります。重要な変更がある場合は、アプリ内またはメールにてお知らせします。</p>
+
+      <h2>10. お問い合わせ</h2>
+      <p>
+        本プライバシーポリシーに関するご質問や、個人情報に関する権利行使のご請求は、下記までご連絡ください。
+      </p>
+      <p>
+        株式会社CyberTrip<br />
+        メール: <a href="mailto:support@cybertrip.jp">support@cybertrip.jp</a>
+      </p>
+
+    </div>
+  </section>
+
+  <Footer lang={lang} />
+</Base>
+
+<style>
+  .legal-content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .legal-intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    color: rgba(255,255,255,0.8);
+  }
+  .legal-content h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+    color: #fff;
+  }
+  .legal-content h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.5rem;
+    color: rgba(255,255,255,0.9);
+  }
+  .legal-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 0.75rem;
+  }
+  .legal-content ul {
+    margin: 0.5rem 0 1.5rem 1.5rem;
+    color: rgba(255,255,255,0.75);
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+  .legal-content a {
+    color: var(--accent, #00d4aa);
+    text-decoration: underline;
+  }
+</style>
