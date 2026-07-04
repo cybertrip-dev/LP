@@ -1,0 +1,145 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Header from '../../../components/Header.astro';
+import AnnounceBanner from '../../../components/AnnounceBanner.astro';
+import Footer from '../../../components/Footer.astro';
+
+const lang = 'en';
+---
+
+<Base
+  title="Privacy Policy — CyberTrip"
+  description="CyberTrip, Inc.'s privacy policy describing how we handle personal information on the Drift app."
+  lang={lang}
+  page="privacy"
+>
+  <AnnounceBanner lang={lang} />
+  <Header lang={lang} page="privacy" />
+
+  <section class="page-hero page-hero--news">
+    <div class="page-hero-inner">
+      <p class="page-hero-label">Privacy Policy</p>
+      <h1 class="page-hero-title">Privacy Policy</h1>
+      <p class="page-hero-sub">Last updated: June 5, 2026</p>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="section-inner legal-content">
+
+      <p class="legal-intro">
+        CyberTrip, Inc. ("we", "us") sets out this Privacy Policy describing how we handle your personal information on the travel matching app "Drift" ("the Service").
+      </p>
+
+      <h2>1. Information We Collect</h2>
+      <h3>Account Information</h3>
+      <p>Name, email address, date of birth, profile photo, and bio.</p>
+      <h3>Travel Information</h3>
+      <p>Destinations, travel dates, and travel preferences/interests.</p>
+      <h3>Usage Data</h3>
+      <p>App usage patterns, features used, and time spent in the app.</p>
+      <h3>Location Information</h3>
+      <p>Approximate location, used to show nearby travelers, with your permission.</p>
+      <h3>Social Media Linking</h3>
+      <p>If you link an external service such as Instagram, we receive account information and the permissions necessary to post on your behalf.</p>
+
+      <h2>2. How We Use Your Information</h2>
+      <ul>
+        <li>To provide and improve the Service</li>
+        <li>To match you based on travel preferences</li>
+        <li>To send notifications and updates</li>
+        <li>To ensure safety and prevent misuse</li>
+        <li>To analyze usage trends</li>
+        <li>To comply with legal obligations</li>
+      </ul>
+
+      <h2>3. How We Share Information</h2>
+      <p>We do not sell your personal information to third parties. We may share information only in the following cases:</p>
+      <h3>Other Users</h3>
+      <p>Your profile information is shown to other users in accordance with your privacy settings.</p>
+      <h3>Service Providers</h3>
+      <p>Third-party companies that support our operations (cloud infrastructure, analytics tools, etc.).</p>
+      <h3>Legal Requirements</h3>
+      <p>Where required by law or necessary to protect our rights.</p>
+
+      <h2>4. Data Security</h2>
+      <p>We use industry-standard encryption and security measures to protect your data. However, we cannot guarantee 100% security for information transmitted over the internet.</p>
+
+      <h2>5. Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Access your personal data</li>
+        <li>Correct inaccurate information</li>
+        <li>Request deletion of your data</li>
+        <li>Opt out of marketing communications</li>
+        <li>Download your data</li>
+        <li>Manage location sharing settings</li>
+      </ul>
+
+      <h2>6. Use of Cookies</h2>
+      <p>We use cookies and similar technologies to improve your experience, analyze usage, and provide personalized content.</p>
+
+      <h2>7. Use by Minors</h2>
+      <p>The Service is not intended for individuals under the age of 18. We do not knowingly collect personal information from individuals under 18.</p>
+
+      <h2>8. International Data Transfers</h2>
+      <p>Your information may be transferred to and stored on servers located in different countries. We implement appropriate safeguards for any international transfer.</p>
+
+      <h2>9. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. We will notify you of material changes via the app or by email.</p>
+
+      <h2>10. Contact Us</h2>
+      <p>
+        If you have questions about this Privacy Policy or wish to exercise your rights regarding your personal information, please contact us at:
+      </p>
+      <p>
+        CyberTrip, Inc.<br />
+        Email: <a href="mailto:support@cybertrip.jp">support@cybertrip.jp</a>
+      </p>
+
+    </div>
+  </section>
+
+  <Footer lang={lang} />
+</Base>
+
+<style>
+  .legal-content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .legal-intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    color: rgba(255,255,255,0.8);
+  }
+  .legal-content h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+    color: #fff;
+  }
+  .legal-content h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.5rem;
+    color: rgba(255,255,255,0.9);
+  }
+  .legal-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 0.75rem;
+  }
+  .legal-content ul {
+    margin: 0.5rem 0 1.5rem 1.5rem;
+    color: rgba(255,255,255,0.75);
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+  .legal-content a {
+    color: var(--accent, #00d4aa);
+    text-decoration: underline;
+  }
+</style>

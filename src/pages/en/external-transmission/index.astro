@@ -1,0 +1,165 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Header from '../../../components/Header.astro';
+import AnnounceBanner from '../../../components/AnnounceBanner.astro';
+import Footer from '../../../components/Footer.astro';
+
+const lang = 'en';
+
+const items = [
+  {
+    name: 'Firebase Analytics',
+    provider: 'Google LLC',
+    info: 'App usage information (screen views, feature usage, etc.)',
+    purpose: 'Usage analytics for service improvement (only sent when opted in)',
+  },
+  {
+    name: 'Firebase Cloud Messaging (FCM)',
+    provider: 'Google LLC',
+    info: 'Device identifier (device token) required for push notification delivery',
+    purpose: 'Push notification delivery',
+  },
+  {
+    name: 'Sentry',
+    provider: 'Functional Software, Inc.',
+    info: 'Technical information when the app crashes or an error occurs (error details, location, etc.)',
+    purpose: 'Detecting and fixing app defects',
+  },
+  {
+    name: 'Stripe Identity',
+    provider: 'Stripe, Inc.',
+    info: 'Identity document information submitted for age and identity verification',
+    purpose: 'Age and identity verification',
+  },
+];
+---
+
+<Base
+  title="External Transmission Policy — CyberTrip"
+  description="Disclosure of information transmitted to third parties from the Drift app, provided by CyberTrip, Inc."
+  lang={lang}
+  page="external-transmission"
+>
+  <AnnounceBanner lang={lang} />
+  <Header lang={lang} page="external-transmission" />
+
+  <section class="page-hero page-hero--news">
+    <div class="page-hero-inner">
+      <p class="page-hero-label">External Transmission Policy</p>
+      <h1 class="page-hero-title">External Transmission Policy</h1>
+      <p class="page-hero-sub">Last updated: July 5, 2026</p>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="section-inner legal-content">
+
+      <p class="legal-intro">
+        CyberTrip, Inc. ("we", "us") discloses the following information regarding data transmitted from your device to third parties when you use our travel community app "Drift" ("the Service"), pursuant to the external transmission disclosure requirements of Japan's Telecommunications Business Act (Article 27-12).
+      </p>
+
+      <h2>1. Information Transmitted</h2>
+      <table class="legal-table">
+        <thead>
+          <tr>
+            <th>Recipient</th>
+            <th>Information Transmitted</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map((item) => (
+            <tr>
+              <td>{item.name} ({item.provider})</td>
+              <td>{item.info}</td>
+              <td>{item.purpose}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <h2>2. About Firebase Analytics</h2>
+      <p>
+        Firebase Analytics only operates when you have opted in to usage analytics in the app's privacy settings. If you disable this setting, no information is transmitted. You can change this setting at any time from "Privacy Settings" within the app.
+      </p>
+
+      <h2>3. Recipients' Privacy Policies</h2>
+      <ul>
+        <li>Google LLC: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
+        <li>Functional Software, Inc. (Sentry): <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">https://sentry.io/privacy/</a></li>
+        <li>Stripe, Inc.: <a href="https://stripe.com/privacy" target="_blank" rel="noopener">https://stripe.com/privacy</a></li>
+      </ul>
+
+      <h2>4. Updates to This Policy</h2>
+      <p>
+        If we add a new feature to the Service that involves external transmission, we will promptly update this policy.
+      </p>
+
+      <h2>5. Contact Us</h2>
+      <p>
+        If you have any questions about this policy, please contact us at:
+      </p>
+      <p>
+        CyberTrip, Inc.<br />
+        Email: <a href="mailto:support@cybertrip.jp">support@cybertrip.jp</a>
+      </p>
+
+    </div>
+  </section>
+
+  <Footer lang={lang} />
+</Base>
+
+<style>
+  .legal-content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .legal-intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    color: rgba(255,255,255,0.8);
+  }
+  .legal-content h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+    color: #fff;
+  }
+  .legal-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 0.75rem;
+  }
+  .legal-content ul {
+    margin: 0.5rem 0 1.5rem 1.5rem;
+    color: rgba(255,255,255,0.75);
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+  .legal-content a {
+    color: var(--accent, #00d4aa);
+    text-decoration: underline;
+  }
+  .legal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 2rem;
+    font-size: 0.9rem;
+  }
+  .legal-table th,
+  .legal-table td {
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 0.75rem;
+    text-align: left;
+    vertical-align: top;
+    color: rgba(255,255,255,0.8);
+  }
+  .legal-table th {
+    color: #fff;
+    font-weight: 700;
+    background: rgba(255,255,255,0.05);
+  }
+</style>

@@ -1,0 +1,134 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Header from '../../../components/Header.astro';
+import AnnounceBanner from '../../../components/AnnounceBanner.astro';
+import Footer from '../../../components/Footer.astro';
+
+const lang = 'en';
+---
+
+<Base
+  title="Child Safety Standards — CyberTrip"
+  description="CyberTrip, Inc.'s policy against child sexual abuse and exploitation (CSAE) on the Drift app."
+  lang={lang}
+  page="child-safety"
+>
+  <AnnounceBanner lang={lang} />
+  <Header lang={lang} page="child-safety" />
+
+  <section class="page-hero page-hero--news">
+    <div class="page-hero-inner">
+      <p class="page-hero-label">Child Safety Standards</p>
+      <h1 class="page-hero-title">Child Safety Standards</h1>
+      <p class="page-hero-sub">Last updated: July 5, 2026</p>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="section-inner legal-content">
+
+      <p class="legal-intro">
+        This page sets out CyberTrip, Inc.'s ("we", "us") policy against child sexual abuse and exploitation ("CSAE") on the travel community app "Drift" ("the Service").
+      </p>
+
+      <h2>1. Our Commitment</h2>
+      <p>
+        We have zero tolerance for CSAE on Drift. The Service is intended for use by adults aged 18 and over only, and we prohibit any conduct or content that endangers the safety of children.
+      </p>
+
+      <h2>2. Definition of CSAE</h2>
+      <p>For the purposes of this policy, CSAE includes, without limitation:</p>
+      <ul>
+        <li>Creating, posting, sharing, or requesting images, videos, or text intended to sexually exploit a child</li>
+        <li>Grooming (building a relationship of trust with a child for a sexual purpose)</li>
+        <li>Sextortion (using sexual images or material to threaten or coerce)</li>
+        <li>Soliciting or negotiating sexual contact with a child</li>
+        <li>AI-generated content depicting the sexual exploitation of a child</li>
+      </ul>
+
+      <h2>3. Age Requirement</h2>
+      <p>
+        Use of the Service requires users to be 18 years of age or older. At sign-up, we require a self-reported date of birth and identity verification (via Stripe Identity document check). If we learn that a minor is using the Service, we promptly suspend the account.
+      </p>
+
+      <h2>4. Prohibited Conduct</h2>
+      <p>Across all features of the Service, including chat, profiles, and location sharing, we prohibit:</p>
+      <ul>
+        <li>Content or statements that sexualize children</li>
+        <li>Attempts to make contact with children</li>
+        <li>Sharing links to CSAE content</li>
+        <li>Any other conduct that endangers the safety of children</li>
+      </ul>
+
+      <h2>5. How to Report</h2>
+      <p>
+        You can report a concern at any time using the in-app reporting features for users, messages, and profiles. Reports involving child safety are treated as the highest priority. If you are unable to report from within the app, please contact us directly.
+      </p>
+      <p>
+        Email: <a href="mailto:childsafety@cybertrip.jp">childsafety@cybertrip.jp</a>
+      </p>
+
+      <h2>6. Detection and Response</h2>
+      <p>
+        When we receive a report or otherwise become aware of suspected CSAE, we promptly investigate and take appropriate action, which may include removing content, suspending the account, and preserving records.
+      </p>
+
+      <h2>7. Response to CSAM and Cooperation with Law Enforcement</h2>
+      <p>
+        Upon obtaining actual knowledge of confirmed child sexual abuse material ("CSAM"), we promptly remove it and cooperate with relevant law enforcement authorities, including reporting to the National Center for Missing &amp; Exploited Children ("NCMEC") as required by applicable law and Google Play's Child Safety Standards policy.
+      </p>
+
+      <h2>8. Child Safety Point of Contact</h2>
+      <p>
+        For questions about this policy or our CSAE prevention practices, please contact:
+      </p>
+      <p>
+        CyberTrip, Inc. — Child Safety Team<br />
+        Email: <a href="mailto:childsafety@cybertrip.jp">childsafety@cybertrip.jp</a>
+      </p>
+
+      <h2>9. Compliance and Review</h2>
+      <p>
+        We comply with applicable child safety laws and Google Play's Child Safety Standards policy. This policy is reviewed at least annually and updated as needed.
+      </p>
+
+    </div>
+  </section>
+
+  <Footer lang={lang} />
+</Base>
+
+<style>
+  .legal-content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .legal-intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    color: rgba(255,255,255,0.8);
+  }
+  .legal-content h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+    color: #fff;
+  }
+  .legal-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 0.75rem;
+  }
+  .legal-content ul {
+    margin: 0.5rem 0 1.5rem 1.5rem;
+    color: rgba(255,255,255,0.75);
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+  .legal-content a {
+    color: var(--accent, #00d4aa);
+    text-decoration: underline;
+  }
+</style>
