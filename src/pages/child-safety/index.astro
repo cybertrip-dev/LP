@@ -1,0 +1,134 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import AnnounceBanner from '../../components/AnnounceBanner.astro';
+import Footer from '../../components/Footer.astro';
+
+const lang = 'ja';
+---
+
+<Base
+  title="児童安全基準 — CyberTrip"
+  description="株式会社CyberTripが提供するDriftアプリにおける、児童の性的虐待・搾取（CSAE）に対する方針。"
+  lang={lang}
+  page="child-safety"
+>
+  <AnnounceBanner lang={lang} />
+  <Header lang={lang} page="child-safety" />
+
+  <section class="page-hero page-hero--news">
+    <div class="page-hero-inner">
+      <p class="page-hero-label">Child Safety Standards</p>
+      <h1 class="page-hero-title">児童安全基準</h1>
+      <p class="page-hero-sub">最終更新日: 2026年7月5日</p>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="section-inner legal-content">
+
+      <p class="legal-intro">
+        本ページは、株式会社CyberTrip（以下「当社」）が提供する旅行者コミュニティアプリ「Drift」（以下「本サービス」）における、児童の性的虐待・搾取（Child Sexual Abuse and Exploitation、以下「CSAE」）に対する方針を定めるものです。
+      </p>
+
+      <h2>1. 基本方針</h2>
+      <p>
+        当社は、Drift における CSAE に対して一切の許容をしません（ゼロトレランス）。本サービスは18歳以上の方のみご利用いただけるサービスであり、児童の安全を脅かすいかなる行為・コンテンツも禁止します。
+      </p>
+
+      <h2>2. CSAE の定義</h2>
+      <p>本方針における CSAE には、以下を含みます（これらに限られません）。</p>
+      <ul>
+        <li>児童の性的搾取を目的とした画像・動画・文章の作成、投稿、共有、要求</li>
+        <li>児童に対するグルーミング（性的な目的での信頼関係の構築）</li>
+        <li>セクストーション（性的な画像等を用いた脅迫）</li>
+        <li>児童との性的な接触を目的とした勧誘・交渉</li>
+        <li>AI等により生成された児童の性的搾取コンテンツ</li>
+      </ul>
+
+      <h2>3. 年齢要件</h2>
+      <p>
+        本サービスの利用には18歳以上であることが必要です。登録時に生年月日の申告および本人確認（Stripe Identity による身分証確認）を求めています。未成年者の利用が判明した場合、当該アカウントを速やかに停止します。
+      </p>
+
+      <h2>4. 禁止事項</h2>
+      <p>チャット・プロフィール・位置情報共有を含む本サービスのすべての機能において、以下を禁止します。</p>
+      <ul>
+        <li>児童を性的対象として扱う発言・コンテンツの投稿</li>
+        <li>児童との接触を試みる行為</li>
+        <li>CSAE に該当するコンテンツへのリンクの共有</li>
+        <li>児童の安全を脅かすその他の行為</li>
+      </ul>
+
+      <h2>5. 通報方法</h2>
+      <p>
+        本サービス内のユーザー・メッセージ・プロフィールの通報機能から、いつでも懸念事項を報告できます。児童安全に関する通報は最優先で対応します。アプリを離れずに通報いただけない場合は、下記の窓口までご連絡ください。
+      </p>
+      <p>
+        メール: <a href="mailto:childsafety@cybertrip.jp">childsafety@cybertrip.jp</a>
+      </p>
+
+      <h2>6. 検知と対応</h2>
+      <p>
+        通報を受けた、または CSAE の疑いを認識した場合、当社は速やかに調査を行い、該当するコンテンツの削除、アカウントの利用停止、記録の保全等の適切な措置を講じます。
+      </p>
+
+      <h2>7. CSAM への対応と法執行機関への協力</h2>
+      <p>
+        当社は、確認された児童性的虐待素材（CSAM）を認識した場合、速やかに削除するとともに、適用される法令および Google Play の児童安全基準に従い、National Center for Missing &amp; Exploited Children（NCMEC）への通報を含む、関係法執行機関への協力を行います。
+      </p>
+
+      <h2>8. 児童安全窓口</h2>
+      <p>
+        本方針および CSAE 防止の取り組みに関するお問い合わせは、以下の窓口までご連絡ください。
+      </p>
+      <p>
+        株式会社CyberTrip 児童安全担当<br />
+        メール: <a href="mailto:childsafety@cybertrip.jp">childsafety@cybertrip.jp</a>
+      </p>
+
+      <h2>9. 法令遵守および見直し</h2>
+      <p>
+        当社は、適用される児童安全に関する法令および Google Play の Child Safety Standards ポリシーを遵守します。本方針は必要に応じて改定し、少なくとも年に一度見直しを行います。
+      </p>
+
+    </div>
+  </section>
+
+  <Footer lang={lang} />
+</Base>
+
+<style>
+  .legal-content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .legal-intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    color: rgba(255,255,255,0.8);
+  }
+  .legal-content h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+    color: #fff;
+  }
+  .legal-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 0.75rem;
+  }
+  .legal-content ul {
+    margin: 0.5rem 0 1.5rem 1.5rem;
+    color: rgba(255,255,255,0.75);
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+  .legal-content a {
+    color: var(--accent, #00d4aa);
+    text-decoration: underline;
+  }
+</style>

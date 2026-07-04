@@ -1,0 +1,165 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import AnnounceBanner from '../../components/AnnounceBanner.astro';
+import Footer from '../../components/Footer.astro';
+
+const lang = 'ja';
+
+const items = [
+  {
+    name: 'Firebase Analytics',
+    provider: 'Google LLC',
+    info: 'アプリの利用状況（画面遷移、機能利用状況等）に関する情報',
+    purpose: 'サービス改善のための利用状況分析（オプトイン設定時のみ送信）',
+  },
+  {
+    name: 'Firebase Cloud Messaging (FCM)',
+    provider: 'Google LLC',
+    info: 'プッシュ通知の配信に必要な端末識別子（デバイストークン）',
+    purpose: 'プッシュ通知の配信',
+  },
+  {
+    name: 'Sentry',
+    provider: 'Functional Software, Inc.',
+    info: 'アプリのクラッシュ・エラー発生時の技術情報（エラー内容、発生箇所等）',
+    purpose: 'アプリの不具合検知・改善',
+  },
+  {
+    name: 'Stripe Identity',
+    provider: 'Stripe, Inc.',
+    info: '年齢確認・本人確認のために提出された身分証明書情報',
+    purpose: '年齢確認・本人確認',
+  },
+];
+---
+
+<Base
+  title="外部送信ポリシー — CyberTrip"
+  description="株式会社CyberTripが提供するDriftアプリにおける、外部送信規律（電気通信事業法第27条の12）に基づく情報送信の公表。"
+  lang={lang}
+  page="external-transmission"
+>
+  <AnnounceBanner lang={lang} />
+  <Header lang={lang} page="external-transmission" />
+
+  <section class="page-hero page-hero--news">
+    <div class="page-hero-inner">
+      <p class="page-hero-label">External Transmission Policy</p>
+      <h1 class="page-hero-title">外部送信ポリシー</h1>
+      <p class="page-hero-sub">最終更新日: 2026年7月5日</p>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="section-inner legal-content">
+
+      <p class="legal-intro">
+        株式会社CyberTrip（以下「当社」）は、電気通信事業法第27条の12（外部送信規律）に基づき、当社が提供する旅行者コミュニティアプリ「Drift」（以下「本サービス」）のご利用にあたり、お客様の端末から当社以外の事業者に送信される情報について、以下のとおり公表します。
+      </p>
+
+      <h2>1. 送信される情報の一覧</h2>
+      <table class="legal-table">
+        <thead>
+          <tr>
+            <th>送信先事業者</th>
+            <th>送信される情報の内容</th>
+            <th>利用目的</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map((item) => (
+            <tr>
+              <td>{item.name}（{item.provider}）</td>
+              <td>{item.info}</td>
+              <td>{item.purpose}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <h2>2. Firebase Analytics について</h2>
+      <p>
+        Firebase Analytics は、アプリ内の設定でお客様が利用状況の分析への協力（アナリティクス）を有効にした場合にのみ動作します。無効化した場合、情報は送信されません。設定はアプリ内の「プライバシー設定」からいつでも変更できます。
+      </p>
+
+      <h2>3. 送信先事業者のプライバシーポリシー</h2>
+      <ul>
+        <li>Google LLC: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
+        <li>Functional Software, Inc.（Sentry）: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">https://sentry.io/privacy/</a></li>
+        <li>Stripe, Inc.: <a href="https://stripe.com/jp/privacy" target="_blank" rel="noopener">https://stripe.com/jp/privacy</a></li>
+      </ul>
+
+      <h2>4. 本ポリシーの改定</h2>
+      <p>
+        本サービスに新たな外部送信を伴う機能を追加した場合、本ポリシーを速やかに更新します。
+      </p>
+
+      <h2>5. お問い合わせ</h2>
+      <p>
+        本ポリシーに関するご質問は、下記までご連絡ください。
+      </p>
+      <p>
+        株式会社CyberTrip<br />
+        メール: <a href="mailto:support@cybertrip.jp">support@cybertrip.jp</a>
+      </p>
+
+    </div>
+  </section>
+
+  <Footer lang={lang} />
+</Base>
+
+<style>
+  .legal-content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .legal-intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    color: rgba(255,255,255,0.8);
+  }
+  .legal-content h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+    color: #fff;
+  }
+  .legal-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 0.75rem;
+  }
+  .legal-content ul {
+    margin: 0.5rem 0 1.5rem 1.5rem;
+    color: rgba(255,255,255,0.75);
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+  .legal-content a {
+    color: var(--accent, #00d4aa);
+    text-decoration: underline;
+  }
+  .legal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 2rem;
+    font-size: 0.9rem;
+  }
+  .legal-table th,
+  .legal-table td {
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 0.75rem;
+    text-align: left;
+    vertical-align: top;
+    color: rgba(255,255,255,0.8);
+  }
+  .legal-table th {
+    color: #fff;
+    font-weight: 700;
+    background: rgba(255,255,255,0.05);
+  }
+</style>

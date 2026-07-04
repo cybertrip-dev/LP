@@ -1,0 +1,125 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Header from '../../../components/Header.astro';
+import AnnounceBanner from '../../../components/AnnounceBanner.astro';
+import Footer from '../../../components/Footer.astro';
+
+const lang = 'en';
+---
+
+<Base
+  title="Terms of Service — CyberTrip"
+  description="CyberTrip, Inc.'s Terms of Service for the Drift travel matching app."
+  lang={lang}
+  page="terms"
+>
+  <AnnounceBanner lang={lang} />
+  <Header lang={lang} page="terms" />
+
+  <section class="page-hero page-hero--news">
+    <div class="page-hero-inner">
+      <p class="page-hero-label">Terms of Service</p>
+      <h1 class="page-hero-title">Terms of Service</h1>
+      <p class="page-hero-sub">Last updated: June 5, 2026</p>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="section-inner legal-content">
+
+      <p class="legal-intro">
+        These Terms of Service ("Terms") govern your use of the travel matching app "Drift" ("the Service") provided by CyberTrip, Inc. ("we", "us"). By using the Service, you agree to be bound by these Terms.
+      </p>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>By accessing and using the Service, you agree to be bound by the terms and provisions of these Terms. If you do not agree to these Terms, you may not use the Service.</p>
+
+      <h2>2. Eligibility</h2>
+      <p>You must be at least 18 years old to use the Service. By using the Service, you represent and warrant that you have the right, authority, and capacity to enter into these Terms.</p>
+
+      <h2>3. Account Registration</h2>
+      <p>When creating an account, you must provide accurate and complete information. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.</p>
+
+      <h2>4. Prohibited Uses</h2>
+      <p>You agree not to use the Service to:</p>
+      <ul>
+        <li>Violate any applicable law or regulation</li>
+        <li>Infringe on any intellectual property rights</li>
+        <li>Harass, abuse, or harm another user</li>
+        <li>Post false or misleading information</li>
+        <li>Send spam or unsolicited messages</li>
+        <li>Upload malicious code or viruses</li>
+        <li>Use the Service for dating or romantic solicitation purposes</li>
+        <li>Discriminate against or exclude others on the basis of race, gender, or nationality</li>
+      </ul>
+
+      <h2>5. Content Ownership</h2>
+      <p>You retain ownership of any content you post on the Service. By posting content, you grant us a worldwide, non-exclusive, royalty-free license to use, modify, and display that content in connection with the Service.</p>
+
+      <h2>6. Social Media Integration</h2>
+      <p>The Service offers integration with external services such as Instagram. Linking your account allows viewing and posting content through that account. You may disconnect the integration at any time. Use of any linked external service is subject to that service's own terms.</p>
+
+      <h2>7. Account Suspension and Termination</h2>
+      <p>We reserve the right to suspend or terminate your account at any time for any reason, including violation of these Terms. You may also terminate your account at any time through your account settings.</p>
+
+      <h2>8. Disclaimer of Warranties</h2>
+      <p>The Service is provided "as is" without warranties of any kind. We do not warrant that the Service will be uninterrupted, secure, or error-free.</p>
+
+      <h2>9. Limitation of Liability</h2>
+      <p>We shall not be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with your use of the Service.</p>
+
+      <h2>10. Changes to These Terms</h2>
+      <p>We reserve the right to modify these Terms at any time. We will notify you of material changes. Your continued use of the Service after such changes constitutes acceptance of the new Terms.</p>
+
+      <h2>11. Governing Law and Jurisdiction</h2>
+      <p>These Terms are governed by and construed in accordance with the laws of Japan. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the Tokyo District Court as the court of first instance.</p>
+
+      <h2>12. Contact Us</h2>
+      <p>
+        If you have questions about these Terms, please contact us at:
+      </p>
+      <p>
+        CyberTrip, Inc.<br />
+        Email: <a href="mailto:support@cybertrip.jp">support@cybertrip.jp</a>
+      </p>
+
+    </div>
+  </section>
+
+  <Footer lang={lang} />
+</Base>
+
+<style>
+  .legal-content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .legal-intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    color: rgba(255,255,255,0.8);
+  }
+  .legal-content h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+    color: #fff;
+  }
+  .legal-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 0.75rem;
+  }
+  .legal-content ul {
+    margin: 0.5rem 0 1.5rem 1.5rem;
+    color: rgba(255,255,255,0.75);
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+  .legal-content a {
+    color: var(--accent, #00d4aa);
+    text-decoration: underline;
+  }
+</style>
