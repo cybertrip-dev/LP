@@ -60,7 +60,7 @@ const lang = 'ja';
       <h3>サービス提供者・外部送信先</h3>
       <p>本サービスの運営のため、以下の外部事業者を利用します。一部は日本国外に所在します（第8項参照）。</p>
       <ul>
-        <li><strong>AI処理</strong> — Amazon Bedrock（Anthropic Claude・米国）: 投稿キャプション、おおよそのGPS座標、旅行スタイルの記述文を、コンテンツ生成・マッチング提案のために処理します。氏名・自己紹介文・チャット本文はこの目的では送信しません。</li>
+        <li><strong>AI処理</strong> — Amazon Bedrock（Amazon Titan および Anthropic Claude・米国）: マッチング・モデレーション・コンテンツ機能のため、自己紹介文・興味・国籍・使用言語、旅行情報（旅行先・日程・説明文・旅行スタイル）、投稿キャプション、および位置情報の座標と周辺の地点名（位置情報に基づく豆知識のため）を処理します。氏名およびチャット本文はこれらのAI事業者には送信しません。</li>
         <li><strong>プッシュ通知</strong> — Google（Firebase Cloud Messaging）およびApple（APNs・米国等）: 通知の配信のため。メッセージ通知には本文が含まれるため、チャット本文がこれらの事業者を経由します。通知は端末の設定でオフにできます。</li>
         <li><strong>本人確認</strong> — Stripe, Inc.（米国）: 年齢確認のため、身分証画像・セルフィー・生年月日。</li>
         <li><strong>地図・位置情報</strong> — OpenStreetMap／Nominatim（ドイツ）およびGoogle Maps Platform（米国）: 逆ジオコーディング・地点検索のための座標・検索語。</li>
